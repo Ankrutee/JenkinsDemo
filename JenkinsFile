@@ -1,0 +1,26 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/Ankrutee/JenkinsDemo.git'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "chmod u+x Subtraction.py"
+                sh "./Subtraction.py"
+            }
+        }
+     stage('Test Code1') {
+            steps {
+                sh "chmod u+x TestPass.py"
+                sh "./TestPass.py"
+     stage('Test Code2') {
+            steps {
+                sh "chmod u+x TestFail.py"
+                sh "./TestFail.py"
+            }
+        }
+    } 
+}
