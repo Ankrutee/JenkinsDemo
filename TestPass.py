@@ -4,7 +4,7 @@ import unittest
 
 from Subtraction import subtraction
 
-class TestSum(unittest.TestCase):
+class TestSubtract(unittest.TestCase):
     def test_list_int(self):
         """
         Test case to subtract two numbers
